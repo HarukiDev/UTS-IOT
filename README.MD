@@ -10,8 +10,8 @@ Program ini digunakan untuk memantau suhu dan kelembapan menggunakan sensor DHT2
 - Masuk ke **Developer Zone** di Blynk.
 - Buat **Template Baru**.
 - Masuk ke menu **Datastream** dan buat dua variabel:
-  - `suhu` (double) dengan unit celcius, min 0 max 100
-  - `temperature` (integer) dengan unit percentage, min 0 max 100
+  - `suhu` (double) pin v0 dengan unit celcius, min 0 max 100
+  - `kelembapan` (integer) pin v1 dengan unit percentage, min 0 max 100
 
 ### 2. Mengatur Web Dashboard
 - Tambahkan **Widget Gauge** pada **Web Dashboard**.
