@@ -1,5 +1,29 @@
 # Integrasi Wokwi ke VSCode dan Penggunaan Blynk
 
+## Deskripsi
+
+Program ini digunakan untuk memantau suhu dan kelembapan menggunakan sensor DHT22 yang terhubung dengan ESP32. Data yang diperoleh akan dikirim ke platform Blynk untuk dipantau melalui dashboard.
+
+## Blynk
+
+### 1. Membuat Template
+- Masuk ke **Developer Zone** di Blynk.
+- Buat **Template Baru**.
+- Masuk ke menu **Datastream** dan buat dua variabel:
+  - `suhu` (double) dengan unit celcius, min 0 max 100
+  - `temperature` (integer) dengan unit percentage, min 0 max 100
+
+### 2. Mengatur Web Dashboard
+- Tambahkan **Widget Gauge** pada **Web Dashboard**.
+- Hubungkan widget dengan datastream yang telah dibuat sebelumnya.
+
+### 3. Membuat Device Baru
+- Buka menu **Device** > **Create New Device**.
+- Pilih template yang sudah dibuat.
+- Salin kode atau token yang muncul di sudut kanan atas (notifikasi).
+
+---
+
 ## Instalasi Wokwi ke VSCode
 1. **Install PlatformIO IDE**
    - Buka VSCode dan install ekstensi **PlatformIO IDE**.
@@ -43,23 +67,3 @@
 6. **Menjalankan Kode**
    - Tekan `Ctrl + Shift + P` lalu pilih **Start Wokwi Simulator**.
    - Jika semuanya sudah benar, simulator akan berjalan tanpa kendala.
-
----
-
-## Blynk
-
-### 1. Membuat Template
-- Masuk ke **Developer Zone** di Blynk.
-- Buat **Template Baru**.
-- Masuk ke menu **Datastream** dan buat dua variabel:
-  - `suhu` (double) dengan unit celcius
-  - `temperature` (integer) dengan unit percentage
-
-### 2. Mengatur Web Dashboard
-- Tambahkan **Widget Gauge** pada **Web Dashboard**.
-- Hubungkan widget dengan datastream yang telah dibuat sebelumnya.
-
-### 3. Membuat Device Baru
-- Buka menu **Device** > **Create New Device**.
-- Pilih template yang sudah dibuat.
-- Salin kode atau token yang muncul di sudut kanan atas.
